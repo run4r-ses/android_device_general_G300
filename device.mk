@@ -52,6 +52,3 @@ PRODUCT_PACKAGES += \
 
 # Shipping API Level (Android 10 = 29)
 PRODUCT_SHIPPING_API_LEVEL := 29
-
-# Inherit Virtual A/B or A/B OTA keys/configs
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)

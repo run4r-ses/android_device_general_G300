@@ -37,6 +37,16 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 
+AB_OTA_PARTITIONS += \
+    boot \
+    system \
+    vendor \
+    product \
+    dtbo \
+    vbmeta \
+    vbmeta_system \
+    vbmeta_vendor
+
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x40078000

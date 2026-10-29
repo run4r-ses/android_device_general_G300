@@ -11,8 +11,14 @@ jobs:
     steps:
       - name: Free disk space
         run: |
-          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache
-          sudo docker image prune --all --force || true
+          mkdir -p /tmp/empty
+          for dir in /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache; do
+            if [ -d "$dir" ]; then
+              sudo rsync -a --delete /tmp/empty/ "$dir"/ 2>/dev/null || true
+              sudo rm -rf "$dir"
+            fi
+          done
+          rm -rf /tmp/empty
 
       - name: Install dependencies
         run: |
