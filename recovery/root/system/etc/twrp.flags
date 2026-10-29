@@ -1,0 +1,39 @@
+# <mount_point>        <fstype>  <device>                                                       <flags>
+
+/system_image          emmc      /dev/block/mapper/system                                       flags=backup=0;flashimg=1;display="System Image";slotselect
+/vendor_image          emmc      /dev/block/mapper/vendor                                       flags=backup=0;flashimg=1;display="Vendor Image";slotselect
+/product_image         emmc      /dev/block/mapper/product                                      flags=backup=0;flashimg=1;display="Product Image";slotselect
+
+/metadata              ext4      /dev/block/platform/bootdevice/by-name/md_udc                  flags=display="Metadata";backup=1;wipeingui
+/boot                  emmc      /dev/block/platform/bootdevice/by-name/boot                    flags=display="Boot";backup=1;flashimg=1;slotselect
+/dtbo                  emmc      /dev/block/platform/bootdevice/by-name/dtbo                    flags=display="DTBO";backup=1;flashimg=1;slotselect
+/vbmeta                emmc      /dev/block/platform/bootdevice/by-name/vbmeta                  flags=display="VBMeta";backup=1;flashimg=1;slotselect
+/vbmeta_system         emmc      /dev/block/platform/bootdevice/by-name/vbmeta_system           flags=display="VBMeta System";backup=1;flashimg=1;slotselect
+/vbmeta_vendor         emmc      /dev/block/platform/bootdevice/by-name/vbmeta_vendor           flags=display="VBMeta Vendor";backup=1;flashimg=1;slotselect
+/super                 emmc      /dev/block/platform/bootdevice/by-name/super                   flags=display="Super";backup=0;flashimg=1
+
+/persist               ext4      /dev/block/platform/bootdevice/by-name/persist                 flags=display="Persist";backup=1
+/persist_image         emmc      /dev/block/platform/bootdevice/by-name/persist                 flags=display="Persist Image";backup=1;flashimg=1
+/journey_persist       ext4      /dev/block/platform/bootdevice/by-name/journey_persist         flags=display="Journey Persist";backup=1
+/nvram                 emmc      /dev/block/platform/bootdevice/by-name/nvram                   flags=display="NVRAM (IMEI)";backup=1;flashimg=1
+/nvdata                ext4      /dev/block/platform/bootdevice/by-name/nvdata                  flags=display="NVDATA (IMEI)";backup=1
+/nvcfg                 ext4      /dev/block/platform/bootdevice/by-name/nvcfg                   flags=display="NVCFG";backup=1
+/protect_f             ext4      /dev/block/platform/bootdevice/by-name/protect1                flags=display="Protect1";backup=1
+/protect_s             ext4      /dev/block/platform/bootdevice/by-name/protect2                flags=display="Protect2";backup=1
+/proinfo               emmc      /dev/block/platform/bootdevice/by-name/proinfo                 flags=display="Proinfo";backup=1
+/seccfg                emmc      /dev/block/platform/bootdevice/by-name/seccfg                  flags=display="Seccfg";backup=1
+
+/logo                  emmc      /dev/block/platform/bootdevice/by-name/logo                    flags=display="Logo";backup=1;flashimg=1
+/lk                    emmc      /dev/block/platform/bootdevice/by-name/lk                      flags=display="Bootloader (LK)";backup=1;flashimg=1;slotselect
+/tee                   emmc      /dev/block/platform/bootdevice/by-name/tee                     flags=display="TEE";backup=1;flashimg=1;slotselect
+/scp                   emmc      /dev/block/platform/bootdevice/by-name/scp                     flags=display="SCP";backup=1;slotselect
+/sspm                  emmc      /dev/block/platform/bootdevice/by-name/sspm                    flags=display="SSPM";backup=1;slotselect
+/spmfw                 emmc      /dev/block/platform/bootdevice/by-name/spmfw                   flags=display="SPMFW";backup=1;slotselect
+/md1img                emmc      /dev/block/platform/bootdevice/by-name/md1img                  flags=display="Modem (MD1)";backup=1;slotselect
+/para                  emmc      /dev/block/platform/bootdevice/by-name/para                    flags=display="Misc (para)";backup=1
+/misc2                 emmc      /dev/block/platform/bootdevice/by-name/misc2                   flags=display="Misc2";backup=1
+/persistent            emmc      /dev/block/platform/bootdevice/by-name/frp                     flags=display="FRP";backup=1
+
+/external_sd           auto      /dev/block/mmcblk1p1    /dev/block/mmcblk1                     flags=display="MicroSD Card";storage;wipeingui;removable;fsflags="utf8"
+/usb_otg               auto      /dev/block/sda1         /dev/block/sda                         flags=display="USB-OTG";storage;wipeingui;removable;fsflags="utf8"
+

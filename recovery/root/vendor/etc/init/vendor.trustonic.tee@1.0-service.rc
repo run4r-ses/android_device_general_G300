@@ -1,0 +1,9 @@
+service tee-1-0 /vendor/bin/hw/vendor.trustonic.tee@1.0-service
+    interface vendor.trustonic.tee@1.0::ITee default
+    interface vendor.trustonic.tee.tui@1.0::ITui default
+    user root
+    group root system
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib64/hw:/system/lib64:/system/lib64/hw:/sbin
+    disabled
+    seclabel u:r:recovery:s0
+

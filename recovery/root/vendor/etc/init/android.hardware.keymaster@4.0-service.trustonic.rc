@@ -1,0 +1,8 @@
+service vendor.keymaster-4-0-trustonic /vendor/bin/hw/android.hardware.keymaster@4.0-service.trustonic
+    interface android.hardware.keymaster@4.0::IKeymasterDevice default
+    user root
+    group root system drmrpc
+    setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib64/hw:/system/lib64:/system/lib64/hw:/sbin
+    disabled
+    seclabel u:r:recovery:s0
+

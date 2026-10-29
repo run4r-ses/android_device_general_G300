@@ -1,0 +1,39 @@
+#
+# system.prop for G300
+#
+
+# platform
+ro.board.platform=mt6765
+ro.product.board=v730_64
+ro.vendor.mediatek.platform=MT6765
+ro.hardware.egl=mtk
+ro.project=gm_tr
+ro.target=v730_64
+
+# partitions
+ro.boot.dynamic_partitions=true
+ro.build.ab_update=true
+ro.build.system_root_image=false
+
+# display
+ro.sf.lcd_density=280
+ro.surface_flinger.primary_display_orientation=0
+
+# crypto
+ro.crypto.volume.filenames_mode=aes-256-cts
+ro.hardware.kmsetkey=trustonic
+ro.hardware.gatekeeper=mt6765
+ro.vendor.mtk_tee_gp_support=1
+ro.vendor.mtk_trustonic_tee_support=1
+
+# storage
+ro.vendor.mtk_emmc_support=1
+ro.vendor.mtk_f2fs_enable=1
+ro.frp.pst=/dev/block/platform/bootdevice/by-name/frp
+
+# USB
+sys.usb.configfs=1
+sys.usb.ffs.aio_compat=1
+vendor.usb.controller=musb-hdrc
+vendor.usb.vid=0x0E8D
+
