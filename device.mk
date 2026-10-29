@@ -16,11 +16,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 # Boot Control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-impl.recovery \
-    android.hardware.boot@1.0-service \
-    bootctrl.mt6765 \
-    bootctrl.mt6765.recovery
+    android.hardware.boot@1.0-impl.recovery
 
 # Dynamic Partitions & Fastbootd
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -35,20 +31,11 @@ PRODUCT_PACKAGES += \
 
 # Keymaster / Gatekeeper / Crypto Packages
 PRODUCT_PACKAGES += \
-    libbinder \
-    libkeymaster4 \
-    libkeymaster4support \
-    libkeymaster_messages \
-    libkeymaster_portable \
-    libpuresoftkeymasterdevice \
-    libsoftkeymasterdevice \
-    libgatekeeper
+    libbinder
 
 # Update Engine Sideload
 PRODUCT_PACKAGES += \
-    update_engine \
-    update_engine_sideload \
-    update_verifier
+    update_engine_sideload
 
 # Shipping API Level (Android 10 = 29)
 PRODUCT_SHIPPING_API_LEVEL := 29

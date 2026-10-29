@@ -50,8 +50,18 @@ jobs:
         with:
           path: twrp/device/general/G300
 
+      - name: Setup ccache
+        uses: hendrikmuhs/ccache-action@v1.2
+        with:
+          key: twrp-G300-ccache
+          max-size: 10G
+
       - name: Build image
         run: |
+          export USE_CCACHE=1
+          export CCACHE_EXEC=/usr/bin/ccache
+          export CCACHE_DIR="${HOME}/.cache/ccache"
+          ccache -M 10G
           cd twrp
           source build/envsetup.sh
           export ALLOW_MISSING_DEPENDENCIES=true

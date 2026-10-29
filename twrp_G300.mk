@@ -7,7 +7,7 @@
 
 # Inherit from common AOSP 64-bit configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
 # Inherit from TWRP common configuration (twrp-12.1)
 $(call inherit-product, vendor/twrp/config/common.mk)
