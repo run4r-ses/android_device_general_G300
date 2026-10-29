@@ -4,7 +4,6 @@ import /vendor/etc/init/android.hardware.boot@1.0-service.rc
 import /vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
 import /vendor/etc/init/android.hardware.keymaster@4.0-service.trustonic.rc
 import /vendor/etc/init/android.hardware.vibrator@1.0-service.rc
-import /vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
 import /vendor/etc/init/vendor.trustonic.tee@1.0-service.rc
 import /vendor/etc/init/vendor.trustonic.teeregistry@1.0-service.rc
 
@@ -74,7 +73,6 @@ on property:hwservicemanager.ready=true
     start tee-1-0
     start teeregistry-1-0
     start vendor.keymaster-4-0-trustonic
-    start keymaster_attestation-1-1
     start vendor.gatekeeper-1-0
 
 on property:ro.crypto.state=unsupported
@@ -82,7 +80,6 @@ on property:ro.crypto.state=unsupported
     stop tee-1-0
     stop teeregistry-1-0
     stop vendor.keymaster-4-0-trustonic
-    stop keymaster_attestation-1-1
     stop vendor.gatekeeper-1-0
 
 on property:ro.crypto.state=unencrypted
@@ -90,7 +87,6 @@ on property:ro.crypto.state=unencrypted
     stop tee-1-0
     stop teeregistry-1-0
     stop vendor.keymaster-4-0-trustonic
-    stop keymaster_attestation-1-1
     stop vendor.gatekeeper-1-0
 
 on property:twrp.decrypt.done=true
@@ -98,6 +94,5 @@ on property:twrp.decrypt.done=true
     stop tee-1-0
     stop teeregistry-1-0
     stop vendor.keymaster-4-0-trustonic
-    stop keymaster_attestation-1-1
     stop vendor.gatekeeper-1-0
 
